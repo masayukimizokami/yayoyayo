@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_13_232155) do
+ActiveRecord::Schema.define(version: 2022_07_13_234734) do
+
+  create_table "pets", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "kind"
+    t.text "pr"
+    t.integer "user_id"
+    t.text "letter"
+    t.text "letter2"
+    t.text "letter3"
+    t.string "zzimage"
+    t.string "runimage"
+    t.integer "hp"
+    t.integer "pp"
+    t.integer "yobi"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "pops", force: :cascade do |t|
     t.string "pop"
