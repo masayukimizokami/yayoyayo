@@ -1,0 +1,22 @@
+<%= form_with(model: pop) do |form| %>
+  <% if pop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pop.errors.count, "error") %> prohibited this pop from being saved:</h2>
+
+      <ul>
+        <% pop.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pop %>
+    <%= form.text_field :pop %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
