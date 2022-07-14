@@ -4,7 +4,8 @@ class PetsController < ApplicationController
   # GET /pets or /pets.json
   def index
     @pets = Pet.all
-    @time = Time.now.strftime('%H')
+    @time = Time.now.strftime('%S')
+   
   end
 
   # GET /pets/1 or /pets/1.json
@@ -22,6 +23,7 @@ class PetsController < ApplicationController
 
   # POST /pets or /pets.json
   def create
+   
     @pet = Pet.new(pet_params)
 
     respond_to do |format|

@@ -28,22 +28,24 @@
     <% @pets.each do |pet| %>
       
         <p><%= pet.name %></p>
-        <% if (@time <= '11' and  @time >= '06') || (@time >= '14' and  @time <= '22') %>
-          <%= image_tag pet.image , class:'fluffy' %><p>元気</p>
-        <% elsif @time == '11' %>
-          <%= image_tag pet.runimage , class:'ikari'%><p>怒ってる</p>
-       <% else %>
-          <%= image_tag pet.zzimage ,class:'zzz'%><p>昼寝</p>
+        <% if pet.id == 1 %>
+          <%= image_tag "img1.jpg" , class:'fluffy' %><p>元気</p>
+        <% elsif pet.id == 2%>
+          <%= image_tag "img2.jpg" , class:'fluffy' %><p>2da</p>
+        <% else %>
+         
         <% end %>
+
+
+      
     </div>
         <p><%= pet.kind %><p>
         <p><%= pet.pr %><p>
-       <!-- <td><%= pet.user_id %></td>
+       <td><%= pet.user_id %></td>
         <td><%= pet.letter %></td>
         <td><%= pet.letter2 %></td>
         <td><%= pet.letter3 %></td>
-        <td><%= image_tag pet.zzimage %></td>
-        <td><%= image_tag pet.runimage %></td>-->
+      
         <td><%= link_to 'Show', pet %></td>
         <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
         <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
