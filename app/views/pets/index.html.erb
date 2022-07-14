@@ -2,7 +2,7 @@
 <!--headerのロゴリンクを、dogrun/indexページにする
 -->
 <h1>Pets</h1>
-<%= @time %>
+<%= @time  %>
 
 
 
@@ -28,9 +28,9 @@
     <% @pets.each do |pet| %>
       
         <p><%= pet.name %></p>
-        <% if (@time >= '21' and  @time <= '2') || (@time >= '5' and  @time <= '13') %>
+        <% if (@time >= '21' and  @time <= '02') || (@time >= '05' and  @time <= '13') %>
           <%= image_tag pet.image , class:'fluffy' %><p>元気</p>
-        <% elsif @time = '3' %>
+        <% elsif @time = '03' %>
           <%= image_tag pet.runimage , class:'ikari'%><p>怒ってる</p>
        <% else %>
           <%= image_tag pet.zzimage ,class:'zzz'%><p>昼寝</p>
