@@ -6,36 +6,38 @@
 
 
 
-<table>
+<!--<table>
   <thead>
     <tr>
       <th>名前</th>
       <th>写真</th>
       <th>性格</th>
       <th>コメント</th>
-      <!--<th>User</th>
+      <th>User</th>
       <th>Letter</th>
       <th>Letter2</th>
-      <th>Letter3</th>-->
+      <th>Letter3</th>
       <th>Zzimage</th>
       <th>Runimage</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead>-->
 
-  <tbody>
+  <!--<tbody>-->
+  <div class = "room-show-image">
     <% @pets.each do |pet| %>
-      <tr>
-        <td><%= pet.name %></td>
-        <% if @time < '20' %>
-          <td><%= image_tag pet.image , class:'fluffy' %>20秒までda</td>
-        <% elsif @time < '40' and @time >= '20'%>
-          <td><%= image_tag pet.zzimage ,class:'zzz'%>４０秒まで</td>
+      
+        <p><%= pet.name %></p>
+        <% if (@time >= '06' and  @time <= '11') || (@time >= '14' and  @time <= '22') %>
+          <%= image_tag pet.image , class:'fluffy' %><p>元気</p>
+        <% elsif @time = '12' %>
+          <%= image_tag pet.runimage , class:'ikari'%><p>怒ってる</p>
        <% else %>
-          <td><%= image_tag pet.runimage , class:'ikari'%>４０秒以降</td>
+          <%= image_tag pet.zzimage ,class:'zzz'%><p>昼寝</p>
         <% end %>
-        <td><%= pet.kind %></td>
-        <td><%= pet.pr %></td>
+    </div>
+        <p><%= pet.kind %><p>
+        <p><%= pet.pr %><p>
        <!-- <td><%= pet.user_id %></td>
         <td><%= pet.letter %></td>
         <td><%= pet.letter2 %></td>
