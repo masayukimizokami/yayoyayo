@@ -31,7 +31,7 @@
         <% if (@time >= '21' and  @time <= '02') || (@time >= '05' and  @time <= '13') %>
           <%= image_tag pet.image , class:'fluffy' %><p>元気</p>
         <% elsif @time = '03' %>
-          <%= image_tag pet.runimage , class:'ikari'%><p>怒ってる</p>
+          <%= image_tag pet.runimage , class:'ikari'%><p>お腹すいた</p>
        <% else %>
           <%= image_tag pet.zzimage ,class:'zzz'%><p>昼寝</p>
         <% end %>
