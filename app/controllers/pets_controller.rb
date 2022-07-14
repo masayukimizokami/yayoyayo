@@ -4,6 +4,7 @@ class PetsController < ApplicationController
   # GET /pets or /pets.json
   def index
     @pets = Pet.all
+    @time = Time.now.strftime('%S')
   end
 
   # GET /pets/1 or /pets/1.json

@@ -1,72 +1,46 @@
 <p id="notice"><%= notice %></p>
 
+<div class="room-show-image">
+ 		<%= image_tag @pet.image ,class:'dogrun-show-image'%>
+	</div>
+
 <p>
-  <strong>Name:</strong>
+  <strong>名前:</strong>
   <%= @pet.name %>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <div class="room-show-image">
- 		<%= image_tag @pet.image ,class:'dogrun-show-image'%>
-	</div>
-
-</p>
-
-<p>
-  <strong>Kind:</strong>
+  <strong>性格:</strong>
   <%= @pet.kind %>
 </p>
 
 <p>
-  <strong>Pr:</strong>
+  <strong>コメント:</strong>
   <%= @pet.pr %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @pet.user_id %>
-</p>
-
-<p>
-  <strong>Letter:</strong>
+  <strong>手紙１:</strong>
   <%= @pet.letter %>
 </p>
 
 <p>
-  <strong>Letter2:</strong>
+  <strong>手紙２:</strong>
   <%= @pet.letter2 %>
 </p>
 
 <p>
-  <strong>Letter3:</strong>
+  <strong>手紙３:</strong>
   <%= @pet.letter3 %>
 </p>
 
-<p>
-  <strong>Zzimage:</strong>
-  <%= @pet.zzimage %>
-</p>
+<div class="room-show-image">
+ 		<%= image_tag @pet.zzimage ,class:'dogrun-show-image'%>
+	</div>
 
-<p>
-  <strong>Runimage:</strong>
-  <%= @pet.runimage %>
-</p>
+<div class="room-show-image">
+ 		<%= image_tag @pet.runimage ,class:'dogrun-show-image'%>
+	</div>
 
-<p>
-  <strong>Hp:</strong>
-  <%= @pet.hp %>
-</p>
-
-<p>
-  <strong>Pp:</strong>
-  <%= @pet.pp %>
-</p>
-
-<p>
-  <strong>Yobi:</strong>
-  <%= @pet.yobi %>
-</p>
-
-<%= link_to 'Edit', edit_pet_path(@pet) %> |
-<%= link_to 'Back', pets_path %>
+<%= link_to '編集', edit_pet_path(@pet) %> |
+<%= link_to 'トップ', pets_path %>
